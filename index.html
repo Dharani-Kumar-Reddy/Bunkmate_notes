@@ -63,12 +63,18 @@
 				"MCA-2/3":"",\
 				"MCA-3/3":""}';
        	var obj=JSON.parse(data);
-       	window.location.href = obj[sec];
-		
-
+		if(obj[sec]=="")
+		{
+			document.getElementById('title').innerHTML="Please follow the instructions and contact admin regarding the requested section notes";
+		}
+		else
+		{
+       			window.location.href = obj[sec];
+		}
 	</script>
 </head>
 <body>
-YOUR CONTENT IS LOADING.....
+<h1 id="title">YOUR CONTENT IS LOADING.....<h1>
+	
 </body>
 </html>
